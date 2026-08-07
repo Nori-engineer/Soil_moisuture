@@ -133,7 +133,7 @@ try:
             print("【ポンプ動作】現在{}時です。10秒間散水します。".format(current_hour))
             try:
                 pump_relay.value(0)   # LOW(0) でリレーON
-                time.sleep(10)        # 10秒間散水
+                time.sleep(5)        # 5秒間散水
             finally:
                 pump_relay.value(1)   # 何があっても絶対に HIGH(1) でリレーOFF
                 print("【ポンプ停止】散水が完了しました。")
